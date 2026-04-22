@@ -115,3 +115,7 @@ Issues and PRs welcome. For larger changes, please open an issue first to discus
 [GPL-2.0-or-later](LICENSE) — matches WordPress core.
 
 Slider web component: [img-comparison-slider](https://github.com/sneas/img-comparison-slider) (MIT).
+
+---
+
+Developed by [RaleighDigital.com](https://raleighdigital.com).
