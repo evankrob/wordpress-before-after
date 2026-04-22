@@ -1,0 +1,13 @@
+{
+  "name": "wordpress-before-after",
+  "version": "0.1.0",
+  "description": "Before/after image comparison slider for WordPress (block + shortcode).",
+  "private": true,
+  "scripts": {
+    "start": "wp-scripts start --webpack-src-dir=src/block --output-path=build/block",
+    "build": "wp-scripts build --webpack-src-dir=src/block --output-path=build/block"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.0.0"
+  }
+}

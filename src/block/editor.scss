@@ -1,0 +1,113 @@
+.wpba-editor {
+	.wpba-editor__preview {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+		border-radius: 4px;
+		background: #111;
+	}
+
+	.wpba-editor__pane {
+		position: absolute;
+		inset: 0;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.wpba-editor__pane--after {
+		clip-path: inset(0 0 0 50%);
+	}
+
+	.wpba-editor__divider {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background: #fff;
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+		transform: translateX(-50%);
+		pointer-events: none;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			background: #fff;
+			box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&--vertical {
+		.wpba-editor__pane--after {
+			clip-path: inset(50% 0 0 0);
+		}
+
+		.wpba-editor__divider {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: auto;
+			width: auto;
+			height: 2px;
+			transform: translateY(-50%);
+		}
+	}
+
+	.wpba-label {
+		position: absolute;
+		padding: 4px 10px;
+		font-size: 12px;
+		font-weight: 600;
+		color: #fff;
+		background: rgba(0, 0, 0, 0.6);
+		border-radius: 3px;
+
+		&--before {
+			top: 12px;
+			left: 12px;
+		}
+
+		&--after {
+			top: 12px;
+			right: 12px;
+		}
+	}
+}
+
+.wpba-picker {
+	margin-bottom: 16px;
+
+	> strong {
+		display: block;
+		margin-bottom: 6px;
+	}
+
+	.wpba-picker__preview {
+		display: block;
+		max-width: 100%;
+		max-height: 140px;
+		margin-bottom: 8px;
+		border-radius: 3px;
+	}
+
+	.wpba-picker__empty {
+		padding: 16px;
+		margin-bottom: 8px;
+		text-align: center;
+		background: #f0f0f1;
+		border-radius: 3px;
+		color: #50575e;
+		font-size: 12px;
+	}
+
+	.wpba-picker__actions {
+		display: flex;
+		gap: 8px;
+	}
+}

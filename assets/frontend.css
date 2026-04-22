@@ -1,0 +1,73 @@
+/* Before / After Slider — frontend styles */
+
+.wpba-slider-wrap {
+	--wpba-handle-color: #ffffff;
+	--wpba-handle-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.2);
+	--wpba-divider-width: 2px;
+	--wpba-label-bg: rgba(0, 0, 0, 0.65);
+	--wpba-label-color: #ffffff;
+
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.wpba-slider-wrap img-comparison-slider {
+	width: 100%;
+	display: block;
+	visibility: inherit;
+
+	/* Web component design tokens */
+	--divider-width: var(--wpba-divider-width);
+	--divider-color: var(--wpba-handle-color);
+	--divider-shadow: var(--wpba-handle-shadow);
+	--default-handle-color: var(--wpba-handle-color);
+	--default-handle-opacity: 1;
+	--default-handle-shadow: var(--wpba-handle-shadow);
+}
+
+.wpba-slider-wrap img-comparison-slider img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+
+/* Corner labels */
+.wpba-slider-wrap .wpba-label {
+	position: absolute;
+	padding: 6px 12px;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: var(--wpba-label-color);
+	background: var(--wpba-label-bg);
+	border-radius: 3px;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.wpba-slider-wrap .wpba-label--before {
+	top: 12px;
+	left: 12px;
+}
+
+.wpba-slider-wrap .wpba-label--after {
+	top: 12px;
+	right: 12px;
+}
+
+.wpba-slider-wrap[data-orientation="vertical"] .wpba-label--after {
+	top: auto;
+	bottom: 12px;
+	right: auto;
+	left: 12px;
+}
+
+/* Respect user reduced motion for any hover transitions the component applies */
+@media (prefers-reduced-motion: reduce) {
+	.wpba-slider-wrap img-comparison-slider {
+		--transition-time: 0s;
+	}
+}
