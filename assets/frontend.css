@@ -34,6 +34,11 @@
 	object-fit: cover;
 }
 
+/* Custom handle — white circle with black arrows */
+.wpba-slider-wrap .wpba-handle-icon {
+	filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.4));
+}
+
 /* Corner labels */
 .wpba-slider-wrap .wpba-label {
 	position: absolute;
